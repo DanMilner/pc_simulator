@@ -13,6 +13,7 @@
 #include "lvgl/lvgl.h"
 #include "lv_drivers/display/monitor.h"
 #include "lv_drivers/indev/mouse.h"
+#include "steering_wheel/wheel_gui.h"
 #include "lv_examples/lv_apps/demo/demo.h"
 #include "lv_examples/lv_apps/benchmark/benchmark.h"
 #include "lv_examples/lv_tests/lv_test_theme/lv_test_theme.h"
@@ -51,14 +52,7 @@ int main(int argc, char** argv)
     /*Initialize the HAL for LittlevGL*/
     hal_init();
 
-    /*Load a demo*/
-    demo_create();
-
-    /*Try the benchmark to see how fast is your GUI*/
-    //benchmark_create();
-
-    /*Check the themes too*/
-    //lv_test_theme_1(lv_theme_night_init(210, NULL));
+    run_wheel_gui();
 
     while(1) {
         /* Periodically call the lv_task handler.
