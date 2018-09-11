@@ -11,5 +11,6 @@
 #include "../lvgl/lvgl.h"
 
 void run_wheel_gui(void);
+void set_gauge_value(int value);
 
 #endif /* STEERING_WHEEL_WHEEL_GUI_H_ */

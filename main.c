@@ -52,7 +52,12 @@ int main(int argc, char** argv)
     /*Initialize the HAL for LittlevGL*/
     hal_init();
 
+    //demo_create();
+	lv_theme_t *th = lv_theme_mono_init(10, NULL);
+	lv_theme_set_current(th);
+
     run_wheel_gui();
+
 
     while(1) {
         /* Periodically call the lv_task handler.
